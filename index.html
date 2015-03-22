@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="wtfb">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WHAT THE FUCK SHOULD I NAME MY BAND?</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body ng-controller="wtfbController">
+    <div id="super-wrap">
+      <div id="wrap">
+        <ng-include src="template"></ng-include>
+      </div>
+
+      <div id="info">
+        Powered by Tweets from <strong><a href="https://twitter.com/bandvomit" target="blank">#bandvomit</a></strong><br>
+        This site was fucking made by <strong><a href="https://twitter.com/JulienMelissas" target="blank">Julien</a></strong><br>
+        This site was completly based off <br><strong><a href="http://www.whatthefuckshouldimakefordinner.com"  target="blank">What The Fuck Should I Make For Dinner</a></strong>
+      </div>
+    </div>
+
+    <script type="text/ng-template" id="index">
+    <div id="welcome-template">
+      <h1><a ng-click="getBands()">What the fuck should I name my band?</a></h1>
+      <p>(click above)</p>
+    </div>
+    </script>
+    <script type="text/ng-template" id="loading">
+    <div id="loading-template">
+      <h1>Loading...</h1>
+      <p>Give it a second, it&#39;s going to space.</p>
+    </div>
+    </script>
+    <script type="text/ng-template" id="result">
+    <div id="tweet-template">
+      <p>{{ randomMessage }}</p>
+      <h1><a href="{{ tweetLink }}" target="_blank">{{ bandName }}</h1>
+      <p><a ng-click="nextBand()">I don&#39;t fucking like that.</a></p>
+    </div>
+    </script>
+    <script type="text/ng-template" id="out">
+    <div id="out-template">
+      <h1>Well this fucking sucks.</h1>
+      <p>We&#39;re all out of band names.</p>
+      <p><a href="https://www.youtube.com/watch?v=x_M9zWORBuA">Watch a video of Eric Clapton Shredding instead.</a></p>
+    </div>
+    </script>
+    <script type="text/ng-template" id="error">
+    <div id="error-template">
+      <h1>Well this fucking sucks.</h1>
+      <p>Something went wrong.</p>
+      <p><a ng-click="goHome()">Take me home.</a></p>
+    </div>
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-21923051-4', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
