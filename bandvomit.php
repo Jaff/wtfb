@@ -1,4 +1,5 @@
 <?php
+// Autoload all the things!
 require "vendor/autoload.php";
 
 // Use Twitter OAuth
@@ -30,25 +31,17 @@ if (!($cache->isCached('statuses'))) {
 // Get Statuses from Cache
 $statuses = $cache->retrieve('statuses');
 
+// As long as there are Statuses...
 if (!empty($statuses)) {
   // Make the response JSON
   header('Content-type: application/json');
 
-  // Randomize Statuses - probably should be done on client side...
-  // shuffle($statuses);
-
   // Encode JSON
   $statuses = json_encode($statuses);
 
-  // Return statuses in JSON
+  // Return Statuses in JSON
   echo $statuses;
 } else {
   // Send an error code
   header('HTTP', true, 500);
 }
-
-// if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
-// } else {
-//   // If not an ajax request - exit...
-//   exit();
-// }
