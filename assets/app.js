@@ -43,13 +43,13 @@
     $scope.currentBand = 0;
 
     $scope.messages = [
-      "Here's what to call your stupid fucking band:",
+      "Here's what to call your stupid fracking band:",
       "When your significant other's parents ask what you do for a living, you say: \"I play in...\"",
       "Soon all of your friends will be mispronouncing:",
       "Have you heard? There's a new single out from:",
-      "The radio's jamming the fuck out to:",
+      "The radio's jamming the frack out to:",
       "Coming soon to that terrible basement venue near you:",
-      "Fuck shoegaze. Define your own genre with:",
+      "Frack shoegaze. Define your own genre with:",
       "Radio is obsolete but they'll still play:",
       "Use this name and people will describe you as 'seminal:'",
       "I like their first album best:",

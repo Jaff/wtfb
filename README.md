@@ -1,5 +1,5 @@
 # WTFB
-Source code for [whatthefuckshouldinamemyband.com](http://whatthefuckshouldinamemyband.com/)
+Somewhat sanitized source code for my grandson Julien's web site [whatthef**kshouldinamemyband.com](https://github.com/JulienMelissas/wtfb)
 
 Built in a day or so as an excuse to learn Angular. Using Twitter OAuth for PHP and a simple PHP caching lib.
 
